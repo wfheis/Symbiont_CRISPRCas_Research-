@@ -1,3 +1,8 @@
+"""
+Will Heisler
+Script to build a network of strain genomes based on shared CRISPR array spacers from BLAST results using NetworkX.
+11/3/2025
+"""
 
 import pandas as pd
 import networkx as nx
@@ -129,4 +134,5 @@ plt.title("Array Spacer Sharing Network")
 plt.tight_layout()
 #plt.savefig("arrayA_bb+bh+outgroup_network.png", dpi=600, bbox_inches='tight', transparent=True)
 plt.show()
+
 
