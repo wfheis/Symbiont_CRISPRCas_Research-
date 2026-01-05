@@ -18,7 +18,7 @@ echo "Batch Query: $QUERY"
 
 # If the query is empty, exit
 if [[ -z "$QUERY" ]]; then
-    echo "Error: Query is empty! Check input file formatting."
+    echo "Error: Query is empty. Check input file formatting."
     exit 1
 fi
 
@@ -28,7 +28,7 @@ esearch -db protein -query "$QUERY" | efetch -format fasta > "$OUTPUT_FILE"
 
 # Verify the output file
 if [[ -s "$OUTPUT_FILE" ]]; then
-    echo "✅ All protein sequences saved in $OUTPUT_FILE"
+    echo "All protein sequences saved in $OUTPUT_FILE"
 else
-    echo "⚠️ No sequences retrieved! Check query formatting or NCBI availability."
+    echo "No sequences retrieved. Check query formatting or NCBI availability."
 fi
