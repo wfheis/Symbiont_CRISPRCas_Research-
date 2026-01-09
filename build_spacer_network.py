@@ -58,7 +58,7 @@ edges.to_csv("outgroupRC_spacer_edges.csv", index=False)
 
 # Create graph AND ensure isolated nodes are included
 G = nx.Graph()
-G.add_nodes_from(all_strains)  # <--- Ensures single-node strains are present
+G.add_nodes_from(all_strains)  # ensure single-node strains are present
 
 # Add edges with weights
 for _, row in edges.iterrows():
@@ -134,5 +134,6 @@ plt.title("Array Spacer Sharing Network")
 plt.tight_layout()
 #plt.savefig("arrayA_bb+bh+outgroup_network.png", dpi=600, bbox_inches='tight', transparent=True)
 plt.show()
+
 
 
